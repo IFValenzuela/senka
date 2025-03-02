@@ -1,0 +1,1012 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5;
+  background-color: #0e0e0e;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #d4af37;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Header */
+/* Contenedor del Header */
+/* Estilo general para el header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.header .logo {
+  flex: 0 1 auto; /* El logo tiene su propio tamaño */
+}
+
+.header .logo img {
+  height: 40px; /* Ajusta el tamaño del logo */
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espaciado entre los elementos del menú */
+  align-items: center; /* Asegura que los items se alineen verticalmente */
+}
+
+/* Estilos de los enlaces */
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f1c40f; /* Cambia el color cuando se pasa el mouse */
+}
+
+/* Carrito */
+.cart {
+  display: flex;
+  align-items: center; /* Alinea el carrito verticalmente con los otros elementos */
+  justify-content: center;
+  position: relative; /* Necesario para el posicionamiento absoluto del contador */
+}
+
+.cart-icon {
+  height: 24px; /* Tamaño del ícono del carrito */
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; /* Mueve el contador hacia arriba */
+  right: -10px; /* Mueve el contador hacia la derecha */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 6px;
+  border: 2px solid #000;
+}
+/* Estilo general para el header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.header .logo {
+  flex: 0 1 auto; /* El logo tiene su propio tamaño */
+}
+
+.header .logo img {
+  height: 40px; /* Ajusta el tamaño del logo */
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espaciado entre los elementos del menú */
+  align-items: end; /* Asegura que los items se alineen verticalmente */
+}
+
+/* Estilos de los enlaces */
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f1c40f; /* Cambia el color cuando se pasa el mouse */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* Pantalla completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video ocupe todo el espacio sin distorsión */
+  z-index: 0; /* Detrás del contenido */
+}
+
+.hero-content {
+  z-index: 1; /* Frente del video */
+  color: #f5f5f5;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .button {
+  background-color: #d4af37;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: #0e0e0e;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-content .button:hover {
+  background-color: #f5f5f5;
+  color: #0e0e0e;
+}
+
+/* Overlay para mejorar la legibilidad del texto */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece ligeramente el video */
+  z-index: 1;
+}
+
+
+/* Section Titles */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+
+/* Concept Section */
+.concept {
+  display: flex;
+  gap: 50px;
+  padding: 100px 10%;
+  background-color: #151515;
+}
+
+.concept-content {
+  flex: 1;
+  color: #d4af37;
+}
+
+.concept-content p {
+  color: #f5f5f5;
+}
+
+.concept-image img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 100px 10%;
+  background-color: #0e0e0e;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.testimonial-card {
+  flex: 1;
+  background-color: #151515;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-card p {
+  color: #f5f5f5;
+  font-style: italic;
+}
+
+.testimonial-card h3 {
+  margin-top: 10px;
+  color: #d4af37;
+}
+
+/* Michelin Section */
+.michelin-stars {
+  padding: 100px 10%;
+  background-color: #151515;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.michelin-image img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.michelin-text {
+  flex: 1;
+  color: #f5f5f5;
+}
+
+.locations {
+  text-align: center; /* Centra todo el texto dentro de la sección */
+  padding: 50px 20px;
+}
+
+.locations h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.locations-grid {
+  display: flex;
+  justify-content: center; /* Centra los elementos de las localidades */
+  gap: 30px;
+  flex-wrap: wrap; /* Asegura que los elementos se ajusten si hay poco espacio */
+}
+
+.location-item {
+  text-align: center; /* Centra el texto dentro de cada localidad */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+}
+
+.location-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.location-item p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+
+.social-links a:hover {
+  color: #f5f5f5;
+}
+
+/* Menú Section */
+.menu {
+  padding: 60px 10%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.menu-category {
+  margin-bottom: 50px;
+}
+
+.menu-category h3 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu-item {
+  background-color: #fff;
+  width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-description {
+  padding: 20px;
+}
+
+.menu-description h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu-description p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.menu-description .price {
+  font-size: 1.2rem;
+  color: #d4af37; /* Dorado para destacar el precio */
+}
+/* Estilos para las estrellas de valoración */
+.stars {
+  color: #f1c40f; /* Color dorado para las estrellas */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.star {
+  margin-right: 5px;
+}
+
+/* Animación para la imagen del restaurante */
+.animated-img {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Definir la animación fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para la sección Nosotros */
+.nosotros {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.historia {
+  margin-bottom: 50px;
+}
+
+.historia h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+.historia p {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nosotros-img {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el video en la sección de historia */
+.video-historia {
+position: relative;
+width: 100%;
+max-width: 100%;
+height: auto;
+overflow: hidden;
+border-radius: 10px;
+}
+
+.nosotros-video {
+width: 100%;
+height: 100%;
+object-fit: cover;  /* Esto asegurará que el video cubra todo el contenedor sin distorsionarse */
+border-radius: 10px;
+}
+
+.nosotros .historia {
+margin-bottom: 40px;
+text-align: center;
+}
+
+.nosotros .historia h3 {
+font-size: 1.8rem;
+margin-bottom: 20px;
+}
+
+.nosotros .historia p {
+font-size: 1.1rem;
+line-height: 1.6;
+margin-bottom: 30px;
+color: #333;
+}
+
+.mision-vision {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.mision, .vision {
+  width: 45%;
+}
+
+.mision h3, .vision h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+.mision p, .vision p {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+.testimonios {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.testimonios h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonio {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.testimonio strong {
+  font-weight: bold;
+  color: #333;
+}
+/* Sección Contacto */
+.contacto {
+padding: 50px 20px;
+background-color: #f5f5f5;
+color: #333;
+text-align: center;
+}
+
+.contacto h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: #2e2e2e;
+}
+
+.contacto .subtitulo {
+font-size: 1.2rem;
+margin-bottom: 40px;
+color: #777;
+}
+
+.contacto-contenedor {
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+justify-content: center;
+}
+
+.formulario-contacto, .informacion-contacto {
+background-color: #fff;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+flex: 1 1 400px;
+max-width: 500px;
+}
+
+.formulario-contacto h3, .informacion-contacto h3 {
+font-size: 1.8rem;
+margin-bottom: 20px;
+color: #2e2e2e;
+}
+
+.formulario-contacto label {
+display: block;
+font-size: 1rem;
+margin-bottom: 5px;
+color: #555;
+}
+
+/* Estilos generales para los formularios */
+.formulario-contacto input, 
+.formulario-contacto textarea {
+width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+padding: 10px; /* Espaciado interno para los campos */
+margin-bottom: 15px; /* Espaciado entre los campos */
+border: 1px solid #ccc; /* Borde suave */
+border-radius: 5px; /* Bordes redondeados */
+box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del campo */
+}
+
+/* Alineación y estilo del botón */
+.boton-enviar {
+background-color: #000; /* Color de fondo */
+color: #fff; /* Color del texto */
+padding: 12px 20px; /* Espaciado interno */
+border: none;
+border-radius: 5px; /* Bordes redondeados */
+cursor: pointer;
+width: 100%; /* Hace que el botón ocupe todo el ancho */
+font-size: 1.1rem;
+}
+
+/* Cambiar el color del botón cuando el cursor pasa por encima */
+.boton-enviar:hover {
+background-color: #444;
+}
+
+/* Estilos para el contenedor de los campos del formulario */
+.formulario-contacto label {
+display: block; /* Asegura que el label esté en su propia línea */
+margin-bottom: 5px; /* Espaciado entre el label y el campo */
+font-size: 1rem; /* Tamaño del texto de los labels */
+font-weight: bold; /* Hacer los labels en negrita */
+}
+
+
+
+.boton-enviar {
+display: inline-block;
+padding: 10px 20px;
+font-size: 1rem;
+color: #fff;
+background-color: #333;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+background-color: #555;
+}
+
+.informacion-contacto p {
+font-size: 1rem;
+margin-bottom: 15px;
+color: #555;
+}
+
+.mapa iframe {
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Hero de Reservar */
+.hero-reservar {
+background: url('hero-reservar.jpg') center/cover no-repeat;
+color: #fff;
+text-align: center;
+padding: 100px 20px;
+}
+
+.hero-reservar h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.hero-reservar p {
+font-size: 1.2rem;
+}
+
+.formulario-reservar {
+padding: 50px 20px;
+background-color: #f4f4f4;
+}
+
+.formulario-container {
+max-width: 600px;
+margin: 0 auto;
+background-color: white;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.formulario-container h2 {
+text-align: center;
+margin-bottom: 20px;
+color: #d4af37;
+
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+color: #333; /* Color del texto de las etiquetas (como estaba antes) */
+}
+
+input, select {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+color: #333; /* Color del texto dentro de los campos (como estaba antes) */
+}
+
+select {
+appearance: none;
+}
+
+button {
+width: 100%;
+padding: 10px;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+
+button:hover {
+background-color: #555;
+}
+
+input, select {
+max-width: 100%;
+width: 100%;
+font-size: 14px;
+}
+.add-to-cart {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #1a1a1a;
+}
+/* Login Container */
+.login-container {
+  background: #fff;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 200px; /* Ajuste adicional para que no quede tan pegado */
+  margin-bottom: 100px;
+}
+
+/* Centrar el logo */
+.login-container .logo {
+  margin-bottom: 20px;
+}
+
+.login-container .logo img {
+  height: 80px; /* Tamaño ajustado */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Títulos y etiquetas */
+.login-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container .form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.login-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-container .form-group input {
+ width: 100%; /* Asegura que se adapte al ancho del contenedor */
+  width: 350px; /* Aumentamos el ancho máximo */
+  padding: 10px; /* Mantener el padding cómodo */
+  font-size: 14px; /* Tamaño del texto */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Centrar en el contenedor */
+}
+
+.login-container .login-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container .login-btn:hover {
+  background-color: #ff9900;
+}
+
+/* Link para contraseña olvidada */
+.login-container .footer-link {
+  margin-top: 20px;
+}
+
+.login-container .footer-link a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.login-container .footer-link a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+.register-link p {
+  color: #000000; 
+  font-size: 14px; 
+  margin-top: 20px; 
+}
+/* Contenedor principal del carrito */
+.cart-container {
+  background-color: #fff; /* Fondo blanco del contenedor */
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto; /* Agregamos un margen superior para bajarlo */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
+  text-align: center;
+}
+
+.cart-container h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+/* Tabla de productos */
+.cart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.cart-table td {
+  color: #555;
+}
+
+.cart-table .remove-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cart-table .remove-btn:hover {
+  background-color: darkred;
+}
+
+/* Total y botones */
+.cart-total h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-actions .btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-actions .btn:hover {
+  background-color: #ff9900;
+}
+/* Estilo específico para el total */
+.total-amount {
+  color: #d4af37; /* Color dorado */
+  font-weight: bold; /* Destacar el texto */
+  font-size: 20px; /* Tamaño adecuado */
+  text-align: right; /* Alinear a la derecha si es necesario */
+}
+.cart {
+  position: relative;
+}
+
+.cart-icon {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Contador del carrito */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 8px;
+  border: 2px solid #000; /* Para que se vea bien sobre el icono */
+}
+#add-to-cart-message {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 999;
+}
+
+#add-to-cart-message.show {
+  display: block;
+}

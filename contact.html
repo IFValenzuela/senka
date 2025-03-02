@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Senka</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/Senka1.png" alt="Senka Logo"></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reservar.html">Reservar</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Contacto -->
+<section class="contacto">
+  <h2>Contáctanos</h2>
+  <p class="subtitulo">Estamos aquí para ayudarte. Contáctanos para reservas, consultas o cualquier información adicional.</p>
+
+  <div class="contacto-contenedor">
+    <!-- Formulario de Contacto -->
+    <div class="formulario-contacto">
+      <h3>Escríbenos</h3>
+      <form action="https://example.com/contacto" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+      </form>
+    </div>
+
+    <!-- Información de Contacto -->
+    <div class="informacion-contacto">
+      <h3>Nuestra Información</h3>
+      <p><strong>Teléfono:</strong> +1 800 123 4567</p>
+      <p><strong>Correo Electrónico:</strong> contacto@lexusrestaurant.com</p>
+      <p><strong>Dirección:</strong> 123 Avenida Principal, Ciudad de Lujo</p>
+      
+      <h3>Ubicación</h3>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345091845!2d-122.41941548468103!3d37.7749297797586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064cb10c55d%3A0x86f7d0f340c2efc6!2sLexus%20Restaurant!5e0!3m2!1sen!2sus!4v1603202021813!5m2!1sen!2sus" 
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Senka. Todos los derechos reservados.</p>
+    <ul class="social-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

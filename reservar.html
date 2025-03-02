@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Senka</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/Senka1.png" alt="Senka Logo"></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reservar.html">Reservar</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero hero-reservar">
+      <div class="hero-content">
+        <h1>Reserva una Mesa</h1>
+        <p class="slogan">Disfruta de una experiencia inolvidable en Senka.</p>
+      </div>
+      <video class="hero-video" autoplay loop muted>
+        <source src="Mesa.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </section>
+
+    <section class="formulario-reservar">
+        <div class="formulario-container">
+          <h2>Haz tu Reservación</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="fecha">Fecha de la Reservación</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <select id="hora" name="hora" required>
+                <option value="">Selecciona la hora</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>
+      
+            <div class="form-group">
+              <label for="personas">Número de Personas</label>
+              <input type="number" id="personas" name="personas" min="1" max="10" placeholder="Número de personas" required>
+            </div>
+      
+            <button type="submit" class="btn-reservar">Reservar Ahora</button>
+          </form>
+        </div>
+      </section>  
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Senka. Todos los derechos reservados.</p>
+      <ul class="social-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
