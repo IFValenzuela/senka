@@ -4,35 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senka - Inicio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <!-- Navegación Fija -->
   <header class="header">
     <div class="logo">
       <a href="index.html">
-        <img src="img/Senka1.png" alt="Senka Logo"></a>
+        <img src="../img/Senka1.png" alt="Senka Logo">
+      </a>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menú</a></li>
-        <li><a href="about.html">Nosotros</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li><a href="reservar.html">Reservar</a></li>
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="reservar.html">Reservar</a></li>
+      <li><a href="login.html" id="login-link">Log In</a></li>
+      <li id="user-profile" class="hidden">
+        <div class="user-menu">
+          <a href="perfil.html" id="user-name">Mi cuenta</a>
+          <ul class="dropdown">
+            <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="carrito.html" class="cart">
+          <img src="../img/cart-icon.png" class="cart-icon" alt="Carrito">
+          <span class="cart-count">0</span>
+        </a>
+      </li>
+    </ul>
   </header>
+  
 
   <!-- Hero Section -->
   <section class="hero">
     <!-- Video de Fondo -->
     <video autoplay muted loop class="hero-video">
-      <source src="img/back.mp4" type="video/mp4">
+      <source src="../img/back.mp4" type="video/mp4" />
       Tu navegador no soporta videos en HTML5.
-    </video>
+    </video>    
   
     <!-- Contenido Principal -->
     <div class="hero-content">
@@ -80,7 +93,7 @@
     <h2>Reconocimientos Michelin</h2>
     <div class="michelin-content">
       <div class="michelin-image">
-        <img src="img/5.jpg" alt="Estrellas Michelin">
+        <img src="../img/5.jpg" alt="Estrellas Michelin">
       </div>
       <div class="michelin-text">
         <p>
@@ -123,5 +136,6 @@
       </ul>
     </div>
   </footer>
+  <script src="../js/login.js"></script>
 </body>
 </html>

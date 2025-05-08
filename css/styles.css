@@ -35,16 +35,18 @@ img {
 /* Contenedor del Header */
 /* Estilo general para el header */
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  gap: 20px; /* Agrega un poco de espacio entre logo y nav */
 }
+
 
 /* Logo */
 .header .logo {
@@ -59,8 +61,11 @@ img {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espaciado entre los elementos del menú */
-  align-items: center; /* Asegura que los items se alineen verticalmente */
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* <- Esto evita que se vayan a la derecha */
+  flex: 1;
 }
 
 /* Estilos de los enlaces */
@@ -83,14 +88,26 @@ img {
 /* Carrito */
 .cart {
   display: flex;
-  align-items: center; /* Alinea el carrito verticalmente con los otros elementos */
-  justify-content: center;
-  position: relative; /* Necesario para el posicionamiento absoluto del contador */
+  align-items: center;
+  position: relative;
 }
 
+
 .cart-icon {
-  height: 24px; /* Tamaño del ícono del carrito */
+  width: 24px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
 }
+
+
+.cart-icon:hover {
+  transform: scale(1.15);
+}
+
 
 .cart-count {
   position: absolute;
@@ -106,15 +123,16 @@ img {
 }
 /* Estilo general para el header */
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Transparente */
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
 }
 
 /* Logo */
@@ -130,8 +148,11 @@ img {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espaciado entre los elementos del menú */
-  align-items: end; /* Asegura que los items se alineen verticalmente */
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0; /* Lo más a la izquierda posible */
+  flex: 0 1 auto;
 }
 
 /* Estilos de los enlaces */
@@ -154,7 +175,7 @@ img {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; /* Pantalla completa */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,9 +189,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que el video ocupe todo el espacio sin distorsión */
-  z-index: 0; /* Detrás del contenido */
+  object-fit: cover;
+  z-index: -1; /* Asegura que esté detrás del contenido */
 }
+
 
 .hero-content {
   z-index: 1; /* Frente del video */
@@ -288,7 +310,22 @@ section h2 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
-.michelin-text {
+.michelin-text {.profile-image {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #d4af37;
+  border-radius: 50%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
   flex: 1;
   color: #f5f5f5;
 }
@@ -372,10 +409,11 @@ section h2 {
 .menu-category h3 {
   font-size: 2rem;
   color: #222;
+
   margin-bottom: 20px;
 }
 
-.menu-items {
+tems {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -406,7 +444,7 @@ section h2 {
 .menu-description {
   padding: 20px;
 }
-
+.menu-i
 .menu-description h4 {
   font-size: 1.5rem;
   color: #333;
@@ -1010,3 +1048,283 @@ font-size: 14px;
 #add-to-cart-message.show {
   display: block;
 }
+
+/* === Arreglo para alinear todos los botones de "Agregar al carrito" === */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 500px; /* <-- fuerza la misma altura para todas las tarjetas */
+}
+
+.menu-description {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-description h4 {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #555;
+}
+
+.qty-value {
+  font-size: 1rem;
+  min-width: 24px;
+  text-align: center;
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
+
+#user-profile {
+  position: relative;
+}
+
+#user-profile:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  padding: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown li {
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown a {
+  display: block;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  background-color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+#user-profile {
+  position: relative;
+}
+
+#user-profile:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  padding: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown li {
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown a {
+  display: block;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  background-color: #333;
+}
+
+.hidden {
+  display: none !important;
+
+}
+.profile-page {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #d4af37;
+  border-radius: 50%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.upload-image-input {
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  max-width: 200px;
+}
+
+.previous-orders h3 {
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.orders-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.order {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+#user-name {
+  color: white;
+}
+
+.page-carrito {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cart-page-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+.page-perfil {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.perfil-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+.calculator-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.calculator {
+  display: inline-block;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.calculator input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+}
+
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.calculator button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculator button:hover {
+  background-color: #666;
+}
+
+.calculator .clear-btn {
+  grid-column: span 4;
+  background-color: #c0392b;
+}
+
+
+
+

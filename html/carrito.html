@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito - Senka</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="page-wrapper page-carrito">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../img/Senka1.png" alt="Senka Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reservar.html">Reservar</a></li>
+        <li><a href="login.html" id="login-link">Log In</a></li>
+        <li id="user-profile" class="hidden">
+          <div class="user-menu">
+            <a href="perfil.html" id="user-name">Mi cuenta</a>
+            <ul class="dropdown">
+              <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="carrito.html" class="cart">
+            <img src="../img/cart-icon.png" class="cart-icon" alt="Carrito">
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Contenido del carrito -->
+    <main class="cart-container">
+      <h1>Tu Carrito</h1>
+
+      <div id="empty-cart-message" style="text-align: center; margin: 20px 0; display: none;">
+        <p>Tu carrito está vacío.</p>
+      </div>
+
+      <div class="cart-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Subtotal</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+            <!-- Los productos se insertarán aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cart-total">
+        <h3>Total: $<span class="total-amount" id="cart-total">0.00</span></h3>
+      </div>
+
+      <div class="cart-actions">
+        <a href="menu.html" class="btn">Seguir Comprando</a>
+        <button class="btn checkout-btn">Finalizar Compra</button>
+        <button class="btn clear-cart-btn">Vaciar Carrito</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Senka. Todos los derechos reservados.</p>
+        <ul class="social-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/login.js"></script>
+  <script src="../js/carrito.js"></script>
+</body>
+</html>

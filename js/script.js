@@ -10,6 +10,14 @@ document.getElementById("reservationForm")?.addEventListener("submit", function 
   alert("¡Gracias por tu reserva! Pronto nos pondremos en contacto.");
 });
 
+// Mostrar un mensaje dinámico al cargar la página
+document.addEventListener("DOMContentLoaded", function () {
+  const intro = document.getElementById("intro");
+  const mensaje = document.createElement("p");
+  mensaje.textContent = "¡Explora nuestras nuevas funciones interactivas!";
+  intro.appendChild(mensaje);
+});
+
 // Array para almacenar los productos en el carrito
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

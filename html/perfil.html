@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Perfil - Senka</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="page-wrapper page-perfil">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../img/Senka1.png" alt="Senka Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reservar.html">Reservar</a></li>
+        <li><a href="login.html" id="login-link">Log In</a></li>
+        <li id="user-profile" class="hidden">
+          <div class="user-menu">
+            <a href="perfil.html" id="user-name">Mi cuenta</a>
+            <ul class="dropdown">
+              <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="carrito.html" class="cart">
+            <img src="../img/cart-icon.png" class="cart-icon" alt="Carrito">
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="perfil-content">
+      <main class="profile-page">
+        <h1>MI PERFIL</h1>
+
+        <!-- Imagen de perfil -->
+        <div class="profile-image">
+          <img src="../img/default-profile.png" alt="Imagen de perfil">
+        </div>
+
+        <!-- Subir nueva imagen -->
+        <input type="file" id="upload-image" accept="image/*" class="upload-image-input"/>
+
+        <!-- Nombre dinámico -->
+        <h2 id="user-name" class="user-name"></h2>
+
+        <!-- Pedidos anteriores -->
+        <section class="previous-orders">
+          <h3>PEDIDOS ANTERIORES</h3>
+          <div class="orders-list">
+            <div class="order">Pedido #001 - 2x Sushi Clásico - $120</div>
+            <div class="order">Pedido #002 - 1x Ramen Especial - $95</div>
+            <div class="order">Pedido #003 - 3x Gyozas - $60</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <section class="calculator-container">
+        <h3>Calculadora</h3>
+        <div class="calculator">
+          <input type="text" id="calc-display" disabled />
+          <div class="buttons">
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button onclick="press('/')">÷</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('*')">×</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('-')">−</button>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="press('+')">+</button>
+            <button onclick="clearCalc()" class="clear-btn">C</button>
+          </div>
+        </div>
+      </section>      
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Senka. Todos los derechos reservados.</p>
+        <ul class="social-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/login.js"></script>
+  <script src="../js/perfil.js"></script>
+  <script>
+    let currentInput = '';
+  
+    function press(char) {
+      currentInput += char;
+      document.getElementById('calc-display').value = currentInput;
+    }
+  
+    function calculate() {
+      try {
+        currentInput = eval(currentInput).toString();
+        document.getElementById('calc-display').value = currentInput;
+      } catch {
+        document.getElementById('calc-display').value = "Error";
+        currentInput = '';
+      }
+    }
+  
+    function clearCalc() {
+      currentInput = '';
+      document.getElementById('calc-display').value = '';
+    }
+  </script>
+  
+</body>
+</html>
